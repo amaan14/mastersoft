@@ -1,0 +1,18 @@
+﻿
+var RenderDropDown = function (control, data, id, value) {
+    control.empty();
+    $.each(data, function () {
+        control.append($("<option />").val(this[id]).text(this[value]));
+    }); control.prepend($("<option selected='selected' />").val(0).text("Please Select"));
+};
+
+var GetLogOutUrl = function () {
+    return "/StudentLogin/Index/";
+}
+
+var GetAPIURL = function () {
+    //return "http://192.168.0.15:8084/";
+    //return "https://cloudmvcapi.mastersofterp.in/";
+    //return "http://localhost:50794/";
+    return "https://cimsapi.mastersofterp.in/";
+}
